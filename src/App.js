@@ -22,7 +22,13 @@ class Form extends React.Component {
 class Card extends React.Component {
   render(){
     return (
-      <div className='card'></div>
+      <div className='card'>
+        <img src='https://www.pngmart.com/files/22/User-Avatar-Profile-PNG-Isolated-Transparent-Picture.png' alt='profile_picture' />
+        <div className='card-desc'>
+        <h4>Name: Oscar</h4>
+        <h4>Company: Koracode</h4>
+        </div>
+      </div>
     );
   }
 }
