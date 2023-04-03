@@ -1,23 +1,48 @@
-import logo from './logo.svg';
+
+import React from 'react';
 import './App.css';
 
+const Header = () => (
+  <div className='header'>
+        <h2>Github Cards app</h2>
+      </div>
+)
+
+class Form extends React.Component {
+  render(){
+    return (
+      <form>
+          <input type='text' placeholder='Github username' required />
+          <button>Add Card</button>
+      </form>
+    );
+  }
+}
+
+class Card extends React.Component {
+  render(){
+    return (
+      <div className='card'></div>
+    );
+  }
+}
+
+class CardList extends React.Component {
+  render(){
+    return (
+      <div className='card-list'>
+        <Card />
+      </div>
+    );
+  }
+}
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='container'>
+      <Header />
+      <Form />
+      <CardList />
+      
     </div>
   );
 }
